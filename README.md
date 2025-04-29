@@ -27,6 +27,7 @@ Customer sentiment analysis is an automated process of identifying customer emot
   - Stopword Removal
   - Regular expressions
   - Language detection
+  - CountVectorizer (Bag-of-Words & N-grams)
   - Padding (preparing input to Neural Networks)
   
 ---
