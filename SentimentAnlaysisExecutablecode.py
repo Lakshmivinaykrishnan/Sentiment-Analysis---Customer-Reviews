@@ -70,7 +70,7 @@ print("\n python version is ",python_version())
 # In[70]:
 
 
-amazon=pd.read_csv('C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/amazon_cells_labelled.txt',sep='\t',header=None, names=['review', 'sentiment'])
+amazon=pd.read_csv('path/amazon_cells_labelled.txt',sep='\t',header=None, names=['review', 'sentiment'])
 # Display the DataFrame info to verify
 print(amazon.info())
 print(amazon.head())
@@ -79,7 +79,7 @@ print(amazon.head())
 # In[71]:
 
 
-yelp=pd.read_csv('C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/yelp_labelled.txt',sep='\t',header=None, names=['review', 'sentiment'])
+yelp=pd.read_csv('path/yelp_labelled.txt',sep='\t',header=None, names=['review', 'sentiment'])
 # Display the DataFrame info to verify
 print(yelp.info())
 print(yelp.head())
@@ -89,7 +89,7 @@ print(yelp.head())
 
 
 # Read the file line by line and process
-with open('C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/imdb_labelled.txt', 'r') as file:
+with open('path/imdb_labelled.txt', 'r') as file:
     # Split by tab and filter out malformed lines
     lines = [line.strip().split("\t") for line in file if len(line.strip().split("\t")) == 2 and line.strip().split("\t")[1] != '']
 
@@ -727,10 +727,10 @@ test_label=np.array(y_test)
 
 
 #export the data to csv
-pd.DataFrame(training_padded).to_csv("C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/PA/training_padded.csv")
-pd.DataFrame(training_label).to_csv("C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/PA/training_label.csv")
-pd.DataFrame(test_padded).to_csv("C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/PA/test_padded.csv")
-pd.DataFrame(test_label).to_csv("C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/PA/test_label.csv")
+pd.DataFrame(training_padded).to_csv("path/training_padded.csv")
+pd.DataFrame(training_label).to_csv("path/training_label.csv")
+pd.DataFrame(test_padded).to_csv("path/test_padded.csv")
+pd.DataFrame(test_label).to_csv("path/test_label.csv")
 
 
 # # Building Neural Network
@@ -992,7 +992,7 @@ print(incorrect_predictions[['review', 'sentiment', 'sentiment_prediction']])
 
 
 #Export result
-pd.DataFrame(en_reviews).to_csv("C:/Users/laksh/Desktop/WGU-MS Data analytics/MSDA-D213-Advanced Analytics/Task2/PA/sentiment_model_output.csv")
+pd.DataFrame(en_reviews).to_csv("path/sentiment_model_output.csv")
 
 
 # In[130]:
